@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex004</title>
+    <style>
+        body {
+            display: flex;
+            background-color: lightslategray;
+            color: darkred;
+        }
+        
+        div {
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comandos básicos com JavaScript</h1>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.writeln(`<div> Olá ${nome}, seu nome tem ${nome.length} letras </div>`)
+        document.writeln(`<div> Seu nome em letras maiúsculas é ${nome.toUpperCase()} </div>`)
+        document.write(`<div> Seu nome em letras minúsculas é ${nome.toLowerCase()} </div>`)
+    </script>
+</body>
+</html>
