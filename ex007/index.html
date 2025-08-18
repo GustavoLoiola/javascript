@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos com DOM</title>
+    <style>
+        body {
+            background-color: cadetblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#area {
+            font-size: 30px;
+            background-color: rgb(16, 172, 16);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, seja bem vindo a mais uma página teste para estudos!</h1>
+    <div id="area">
+        Interaja...
+    </div>
+</body>
+<script>
+    var a = window.document.getElementById('area')
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+    /*
+   function somar(n1, n2){
+    var soma = window.alert(`O resultado da soma entre ${n1} e ${n2} é igual a: ${n1 + n2}`)
+   } */
+
+   function clicar () {
+    a.innerText = 'CLICOU!'
+    a.style.background = 'blue'
+    a.style.transition = '1s'
+   }
+
+   function entrar () {
+    a.innerText = 'ENTROU..'
+    a.style.background = 'yellow'
+    a.style.color = 'black'
+    a.style.scale = '1'
+   }
+
+   function sair () {
+    a.innerText = 'SAIU!'
+    a.style.background = 'red'
+    a.style.transition = '1s'
+    a.style.scale = '1.1'
+   }
+
+   /*somar(23, 56)*/
+</script>
+</html>
