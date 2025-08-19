@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+    <style>
+        body {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to right, green, yellow, blue);
+            font-family: Arial, Helvetica, sans-serif;
+            color: darkgreen;
+        }
+
+        input {
+            width: 10;
+            height: 40px;
+        }
+
+        p {
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="tudo">
+        <h1>Você é Brasileiro?</h1>
+        <input type="text" id="txtpais"> País de nascimento
+        <input type="button" value="verificar" id= "botao" onclick="VerificarEstrangeiro()">
+        <div id="resultado">resultado...</div>
+    </div>
+    <script>
+        function VerificarEstrangeiro() {
+            var txtpais = window.document.getElementById('txtpais').value.toLowerCase()
+            var resultado = window.document.querySelector('div#resultado')
+            if (txtpais === 'brasil'|| txtpais ==='Brazil' || txtpais === 'brasiu' ) {
+                resultado.innerHTML = 'Parabéns!!! Você é brasileiro!'
+            }
+            else {
+                resultado.innerHTML = 'Infelizmente você é estrangeiro!'
+            }
+        }
+    </script>
 </body>
 </html>
