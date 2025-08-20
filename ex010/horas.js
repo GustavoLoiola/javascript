@@ -1,11 +1,13 @@
 let hoje = new Date()
-let hora = agora.getHours()
+let hora = hoje.getHours()
+let minuto = hoje.getMinutes()
 
-console.log(`Agora sõa exatamente ${hora} horas!`)
-if (horas < 12) {
+console.log(`Agora são exatamente ${hora}:${minuto.toString().padStart(2, '0')} horas!`)
+
+if (hora < 12) {
     console.log('Bom dia!!!')
 }
-else if (horas <= 18) {
+else if (hora <= 18) {
     console.log('Boa Tarde!!!')
 }
 else {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia e Horário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="titulo">Horário</h1>
+    <div id="caixa">
+        <p id="hora">pau</p>
+        <div id="img-hora"></div>
+    </div>
+
+    <script>
+        let hoje = new Date()
+        let hora = hoje.getHours()
+        let minuto = hoje.getMinutes()
+
+        let horario = document.getElementById('hora')
+        horario.innerHTML = `Agora são exatamente ${hora}:${minuto.toString().padStart(2, '0')} horas!`
+
+        let corpo = document.querySelector('body')
+        let titulo = document.querySelector('h1#titulo')
+
+        let imagem = document.querySelector('div#img-hora')
+        if (hora >= 12 && hora < 17) {
+            imagem.style.backgroundImage = 'url(imagens/tarde.jpg)'
+        }
+        else if (hora >= 17 && hora <= 19) {
+             imagem.style.backgroundImage = 'url(imagens/por-do-sol.jpeg)'
+             corpo.style.backgroundColor = 'rgb(183, 121, 6)'
+             titulo.style.color = 'white'
+        }
+        else if (hora > 19 || hora < 5) {
+             imagem.style.backgroundImage = 'url(imagens/noite.jpeg)'
+             corpo.style.backgroundColor = 'darkslategray'
+             titulo.style.color = 'white'
+        }
+        else if (hora < 7 && hora >= 5){
+             imagem.style.backgroundImage = 'url(imagens/nascer-do-sol.jpg)'
+             corpo.style.backgroundColor = 'goldenrod'
+        }
+        else if (hora < 12 && hora >= 7) {
+             imagem.style.backgroundImage = 'url(imagens/manha.jpg)'
+             corpo.style.backgroundColor = 'rgb(237, 237, 77)'
+        }
+    </script>
+</body>
+</html>
