@@ -13,17 +13,19 @@
             <div>Ano de nascimento: <input type="number" name="data" placeholder="(xxxx)" id="nascimento" required></div>
              <p id="campo-sexo">Sexo:
                 <label for="option">
-                <input type="radio" name="sex" id="mas">Masculino</label>
+                <input type="radio" name="sex" id="mas" required value="Masculino" checked>Masculino
+                </label>
                 <label for="option">
-                <input type="radio" name="sex" id="fem">feminino</label>
+                <input type="radio" name="sex" id="fem" required value="Feminino">Feminino
+                </label>
              </p>
                 
             <br>
             <input type="button" value="Verificar" id="botao" onclick="idade()">
             <p id="res">Preencha o formulário acima para visualizar o resultado!</p>
+            <div id="imagem"></div>
         </form>
     </main>
-
     <script src="index.js"></script>
 </body>
 </html>
