@@ -1,18 +1,18 @@
 function idade () {
-    let data = new Date()
-    let hoje = data.getFullYear()
-    let nas = document.getElementById('nascimento')
-    let idade = hoje - Number(nas.value)
-    let resposta = document.querySelector('p#res')
+    const data = new Date()
+    const hoje = data.getFullYear()
+    const nas = document.getElementById('nascimento')
+    const idade = hoje - Number(nas.value)
+    const resposta = document.querySelector('p#res')
     let genero = ''
-    let fundo = document.querySelector('form')
-    let imagem = document.querySelector('div#imagem')
+    const fundo = document.querySelector('form')
+    const imagem = document.querySelector('div#imagem')
     if (idade > 130 || idade < 0 || nas === '') {
         alert('Idade inválida! Por favor preencha o campo corretamente!')
     }
 
     else {
-    let sexo = document.getElementsByName('sex')
+    const sexo = document.getElementsByName('sex')
     imagem.style.display = 'block'
     fundo.style.height = '450px'
 
