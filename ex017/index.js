@@ -10,8 +10,8 @@ function adicionar() {
     else if (valores.includes(num)) {
         alert('Valor já registrado!')
     }
-    else if (num > 100 || num < 0) {
-            alert('O número digitado não está entre 0 e 100, Por Favor digite novamente.')
+    else if (num > 100 || num < 1) {
+            alert('O número digitado não está entre 1 e 100, Por Favor digite novamente.')
     }
     else {
         valores.push(num)
@@ -28,17 +28,19 @@ function calcular() {
         alert('Não foi possível realizar os cálculos! Por favor preencha todos os campos.')
     }
     else {
-        const resultado = document.createElement('p')
         let soma = 0
         for (c=0;c < valores.length;c++)
             soma += valores[c]
-        maior = Math.max(...valores)
-        menor = Math.min(...valores)
-        resultado.innerHTML = `Ao todo foram informados ${valores.length} números`
-        resultado.innerHTML += `<br> A soma entre todos os números é igual a: ${soma}`
-        resultado.innerHTML += `<br> O maior valor informado foi ${maior}`
-        resultado.innerHTML += `<br> O menor valor informado foi ${menor}`
-        resultado.innerHTML += `<br> A média entre todos os números informados é de: ${soma / valores.length}`
-        calculos.appendChild(resultado)
+        const total = valores.length
+        const maior = Math.max(...valores)
+        const menor = Math.min(...valores)
+        const media = soma / total
+        calculos.innerHTML = `
+        <p>Ao todo foram informados ${total} números.</p>
+        <p>A soma entre todos os números é igual a: ${soma}</p>
+        <p>O maior valor informado foi ${maior}</p>
+        <p>O menor valor informado foi ${menor}</p>
+        <p>A média entre todos os números informados é de: ${media}</p>
+        `
     }
 }
