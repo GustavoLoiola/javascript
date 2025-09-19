@@ -9,6 +9,7 @@ body {
     font-size: 2em;
     background-color: white;
     color: black;
+    transition: 0.5s;
 }
 
 input#botaoTema {
