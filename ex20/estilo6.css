@@ -27,10 +27,11 @@ div#resultado {
     border: 10px solid pink;
     border-radius: 5px;
     font-size: 5em;
-    text-align: left;
+    text-align: right;
 }
 
 div#numeros {
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -39,6 +40,7 @@ div#numeros {
 }
 
 div#operadores {
+    cursor: pointer;
     display: grid;
     grid-area: 3/ 4/ 8/ -1;
     grid-template-columns: repeat(2, 1fr) ;
