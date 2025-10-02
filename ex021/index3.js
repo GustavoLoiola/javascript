@@ -1,26 +1,24 @@
-/*const palavra1 = 'amor'
-const palavra2 = 'roma'
+const primeira_palavra = 'rmao    '
+const segunda_palavra = 'roma'
 
-const anagrama = (palavra, segundaPalavra) => {
-    const palavraVerificada = palavra.replace(' ', '').toUpperCase()
-    const palavra2Verificada = segundaPalavra.replace(' ', '').toUpperCase()
-    if(palavraVerificada.length == palavra2Verificada.length) {
-        let negativo = -1
-        let novaPalavra = ''
-        for(c=0; c < palavraVerificada.length; c++) {
-            if(palavraVerificada[c] != palavra2Verificada[negativo]) {
-                novaPalavra = palavraVerificada[c]
-            }
+const verificaAnagrama = (palavra1, palavra2) => {
+    const pal1 = palavra1.replaceAll(' ', '').toUpperCase()
+    const pal2 = palavra2.replaceAll(' ', '').toUpperCase()
+    let verificador1 = []
+    let verificador2 = []
+    if(pal1.length == pal2.length) {
+        for(let c=0; c < pal1.length; c++) {
+            verificador1 += pal1[c]
+            verificador2 += pal2[c]
         }
-        if(novaPalavra == palavraVerificada) {
+        if(verificador1.includes(...verificador2)) {
             return true
         }
-        else {
-            return false
-        }
+    }
+    else {
+        return false
     }
 }
 
-
-const res = anagrama(palavra1, palavra2)
-console.log(res) */
+const res = verificaAnagrama(primeira_palavra, segunda_palavra)
+console.log(res)
