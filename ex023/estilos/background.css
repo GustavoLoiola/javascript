@@ -1,6 +1,6 @@
 @charset "UTf-8";
 
-div#background {
+#background {
     position: fixed;
     inset: 0;
     z-index: -1;
@@ -9,13 +9,13 @@ div#background {
     height: 100vh;
 }
 
-div#background video {
+#background video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-div#background::after {
+#background::after {
     content: '';
 
     width: inherit;
