@@ -58,3 +58,9 @@ main {
     border: 1px solid var(--text);
     transition: 0.4s;
 }
+
+#footer {
+    color: var(--text);
+    font-size: 0.8em;
+    align-self: flex-start;
+}
