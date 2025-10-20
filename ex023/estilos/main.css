@@ -62,5 +62,6 @@ main {
 #footer {
     color: var(--text);
     font-size: 0.8em;
-    align-self: flex-start;
+    margin-top: 5vh;
+    margin-left: 5px;
 }

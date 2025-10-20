@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@media (min-width: 601px) and (max-width: 1023px) {
+
+    #hamburguer {
+        display: block;
+        background-color: rgb(254, 58, 91);
+        cursor: pointer;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+
+
+}
