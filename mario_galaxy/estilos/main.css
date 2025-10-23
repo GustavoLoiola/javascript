@@ -16,8 +16,8 @@ main {
 }
 
 .main_info > p {
-    font-size: 18px;
-    margin: 20px 0px 28px;
+   font-size: 1em;
+    margin: 20px 0px 28px 10px;
 }
 
 .main_info > div {
@@ -41,6 +41,7 @@ main {
 
 .main_info > div > a {
     background: var(--red);
+    margin-left: 10px;
 }
 
 .main_info > div > a:hover {
@@ -59,9 +60,13 @@ main {
     transition: 0.4s;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 5px;
+}
+
 #footer {
     color: var(--text);
     font-size: 0.8em;
-    margin-top: 5vh;
-    margin-left: 5px;
 }

@@ -19,30 +19,34 @@
     </div>
     <div id="app">
         <header>
-            <img src="midia/boina.png" alt="Chapéu do Mario">
+            <img src="midia/boina.png" alt="Chapéu do Mario" id="chapeu">
 
-            <img src="redes-sociais/menu_logo.svg" alt="" id="hamburguer">
+            <div id="nav">
 
-            <ul class="navigation">
-                <li>
-                    <a href="#" class="navigation_link">Home</a>
-                </li>
-            </ul>
-            <ul class="navigation">
-                <li>
-                    <a href="#" class="navigation_link">Story</a>
-                </li>
-            </ul>
-            <ul class="navigation">
-                <li>
-                    <a href="#" class="navigation_link">Wallpapers</a>
-                </li>
-            </ul>
-            <ul class="navigation">
-                <li>
-                    <a href="https://youtu.be/RO1L6QND5yQ?si=NZp04H7KM5H7C_r7" class="navigation_link" target="_blank">Teaser</a>
-                </li>
-            </ul>
+                <img src="redes-sociais/menu_logo.svg" alt="" id="hamburguer" role="button" tabindex="0">
+
+
+                <ul class="navigation">
+                    <li>
+                        <a href="#" class="navigation_link">Home</a>
+                    </li>
+                </ul>
+                <ul class="navigation">
+                    <li>
+                        <a href="#" class="navigation_link">Story</a>
+                    </li>
+                </ul>
+                <ul class="navigation">
+                    <li>
+                        <a href="#" class="navigation_link">Wallpapers</a>
+                    </li>
+                </ul>
+                <ul class="navigation">
+                    <li>
+                        <a href="https://youtu.be/RO1L6QND5yQ?si=NZp04H7KM5H7C_r7" class="navigation_link" target="_blank">Teaser</a>
+                    </li>
+                </ul>
+            </div>
 
             <div class="navigation_social"> 
                 <a href="https://www.instagram.com/nintendoamerica?igsh=MWFibnYya3RkNXl1eQ==" target="_blank"><img src="redes-sociais/instagram.svg" alt="Instagram-logo"></a>
@@ -52,10 +56,12 @@
                 <a href="https://www.youtube.com/@NintendoAmerica" target="_blank"><img src="redes-sociais/youtube.svg" alt="YouTube-logo"></a>
             </div>
         </header>
+       
         <main>
             <div class="main_info">
 
                 <img
+                id="logo"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
@@ -75,27 +81,34 @@
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-delay="800">
-                    <a href="https://youtu.be/RO1L6QND5yQ?si=NZp04H7KM5H7C_r7" target="_blank">Assistir Teaser</a>
+                    <a 
+                    href="https://youtu.be/RO1L6QND5yQ?si=NZp04H7KM5H7C_r7" 
+                    target="_blank"
+                    id="teaser_link">Assistir Teaser</a>
                     <button>Comprar Ingresso</button>
                 </div>
 
             </div>
             <img
+            id="mario_yoshi"
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-delay="500"
             src="midia/mario-yoshi-galaxy.png" 
             alt="Mario e Luigi" 
-            width="580px">
+            width="550px">
 
         </main>
-         <p id="footer">Site feito por <strong>Gustavo Loiola</strong></p>
+         <footer>
+             <p id="footer">Site feito por <strong>Gustavo Loiola</strong></p>
+         </footer>
     </div>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
+    <script src="index.js"></script>
 </body>
 </html>

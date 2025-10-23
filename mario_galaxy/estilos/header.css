@@ -20,12 +20,16 @@ header > img {
     height: auto;
 }
 
-.navigation {
+.navigation, #nav {
     display: flex;
     align-items: center;
     column-gap: 48px;
-
     list-style-type: none;
+}
+
+#nav {
+    position: relative;
+    background-color: red;
 }
 
 .navigation_link {
@@ -67,6 +71,7 @@ header > img {
     align-items: center;
     column-gap: 24px;
     margin-left: auto;
+    margin-right: 3vw;
 }
 
 .navigation_social > a {
