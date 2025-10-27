@@ -8,17 +8,16 @@
 
     #hamburguer {
         display: block;
-        position: fixed;
         color: var(--red);
         cursor: pointer;
         width: 100px;
         height: 60px;
         left: 0;
-        filter: sepia(100%) saturate(300%) hue-rotate(340deg);
     }
 
     .navigation {
         display: none;
+
     }
 
     header {
@@ -36,6 +35,10 @@
 
     .navigation > li {
         position: fixed;
+    }
+
+    span.icon_link {
+        display: block;
     }
 
     .navigation_social {

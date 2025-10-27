@@ -66,6 +66,10 @@ header > img {
     transition: transform 0.4s;
 }
 
+span.icon_link {
+    display: none;
+}
+
 .navigation_social {
     display: flex;
     align-items: center;
