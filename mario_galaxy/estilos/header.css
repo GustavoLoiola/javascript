@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+body {
+    padding: 0;
+    margin: 0px;
+}
+
 
 #hamburguer {
     display: none;
@@ -25,11 +30,6 @@ header > img {
     align-items: center;
     column-gap: 48px;
     list-style-type: none;
-}
-
-#nav {
-    position: relative;
-    background-color: red;
 }
 
 .navigation_link {
