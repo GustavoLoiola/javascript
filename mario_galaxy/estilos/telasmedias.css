@@ -3,9 +3,9 @@
 @media (min-width: 820px) and (max-width: 1200px) {
 
     header {
-        display: grid;
-        grid-template-columns:0px 1fr 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
         margin-bottom: 50px;
     }
 

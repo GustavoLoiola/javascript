@@ -14,26 +14,28 @@
 
     #hamburguer {
         display: block;
+        position: fixed;
         width: 50px;
+        z-index: 9999;
     }
 
     #chapeu {
         display: none;
     }
 
-   #nav {
-        background-color: blue;
-        padding-top: 30px;
-        display: flex;
+    #nav {
+        background-color: red;
+        padding-top: 50px;
+        display: none;
         flex-direction: column;
         align-items: center;
-        gap: 60px;
+        gap: 90px;
         position: fixed;
-        width: 250px;
+        width: 60vw;
         bottom: -15px;
-        height: 104vh;
+        height: 100vh;
         margin-left: -10px;
-        z-index: 9999;
+        z-index: 9998; 
     }
 
 
@@ -52,10 +54,12 @@
     
     #logo {
         width: 200px;
+        margin-top: 50px;
     }
 
     #mario_yoshi {
         width: 250px;
+        margin-top: 50px;
     }
 
     p {
@@ -71,8 +75,13 @@
 
     }
 
+    .main_info > div {
+        margin-top: 50px;
+    }
+
     footer {
         position: relative;
+        margin-top: 80px;
     }
 
     #footer {
