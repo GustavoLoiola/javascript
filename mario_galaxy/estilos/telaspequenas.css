@@ -1,4 +1,13 @@
 @charset "UTF-8";
+@media (max-width: 768px) {
+  [data-aos],
+  .aos-init,
+  .aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }}
+
 
 @media (max-width: 819px) {
 
@@ -24,8 +33,8 @@
     }
 
     #nav {
-        background-color: red;
-        padding-top: 50px;
+        background-image: linear-gradient(to bottom,  #EE416D, #FC8AB2,#8840D5, #2604BE);            
+        padding-top: 150px;
         display: none;
         flex-direction: column;
         align-items: center;
@@ -37,7 +46,6 @@
         margin-left: -10px;
         z-index: 9998; 
     }
-
 
     #app {
         display: grid;
@@ -86,7 +94,7 @@
 
     #footer {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
         width: 100vw;
     }
 }
