@@ -1,6 +1,10 @@
 import express from 'express'
 /* importando a biblioteca express*/
 
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
+
 const app = express()
 /* fazendo com que a variável app seja a biblioteca express*/
 
@@ -9,6 +13,9 @@ app.use(express.json())
 
 const users = []
 /*lista de usuários*/
+/*MONGO DB
+  USUÁRIO: loiola
+  SENHA: 27Novembro21 */
 
 app.post('/users', (req, res) => {
     users.push(req.body)
@@ -30,3 +37,4 @@ app.get('/users', (req, res) => {
 
 app.listen(4000)
 /*indica em qual porta a nossa api funcionará*/
+
