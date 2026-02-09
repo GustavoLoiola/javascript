@@ -1,14 +1,14 @@
 //Função para mudar tema
 
 const btn_light = document.getElementById('lang')
-const CurrentTheme = document.documentElement;
+const CurrentTheme = document.documentElement
 
 
 changeTheme = () => {
-    const theme = CurrentTheme.getAttribute('data-theme');
+    const theme = CurrentTheme.getAttribute('data-theme')
 
     if(theme === 'dark') {
-        CurrentTheme.removeAttribute('data-theme');
+        CurrentTheme.removeAttribute('data-theme')
     }
     else {
        CurrentTheme.setAttribute('data-theme', 'dark')
@@ -22,43 +22,35 @@ btn_light.addEventListener('click', changeTheme)
 
 
 
-//Função carrosesel de cards
+//Função para mudar cor do header de acordo com a altura da tela
 
+const header = document.querySelector("header")
 
-const cardsSection = document.querySelector('#cards');
-const card = document.querySelectorAll('.card');
-const btnLeft = document.querySelector('.arrow.left');
-const btnRight = document.querySelector('.arrow.right');
-
-
-const totalCards = card.length;
-const visibleCards = 5;
-
-
-const cardWidth = card[0].getBoundingClientRect().width + 12; // gap
-
-
-let currentIndex = 0;
-const maxIndex = totalCards - visibleCards;
-
-
-function updateCarousel() {
-  const offset = currentIndex * cardWidth;
-  cardsSection.style.transform = `translateX(-${offset}px)`;
+changeColor = () => {
+  if (window.scrollY > 200) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 }
 
-// direita
-btnRight.addEventListener('click', () => {
-  if (currentIndex < maxIndex) {
-    currentIndex++;
-    updateCarousel();
-  }
-});
+window.addEventListener("scroll", changeColor);
 
-// esquerda
-btnLeft.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
+
+
+
+//Animação de entrada para o article
+
+const text = document.querySelector("article")
+
+
+textAnimation = () => {
+  if(window.scrollY > 100 && window.scrollY < 1200 ) {
+    text.classList.add("active")
   }
-});
+  else {
+    text.classList.remove("active")
+  }
+}
+
+window.addEventListener('scroll', textAnimation)
