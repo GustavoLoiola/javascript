@@ -35,7 +35,7 @@ function getCEP(){
     let estado = obj.estado
     let ddd = obj.ddd
 
-     answer.innerHTML = 'rua: ' + rua + '<br> bairro: ' + bairro + '<br> local: ' + localidade + '<br> estado: ' + estado + '<br> ddd: ' + ddd
+     answer.innerHTML = `Rua: ${rua} <br> Bairro: ${bairro} <br> Local: ${localidade} <br> Estado: ${estado} <br> ddd: ${ddd}`
 }
 }
 
