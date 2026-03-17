@@ -26,6 +26,7 @@ function getCEP(){
     ajax.open('GET', 'https://viacep.com.br/ws/' + userCEP + '/json/')
     ajax.send()
 
+
     ajax.onload = function () {
 
     let obj = JSON.parse(this.responseText)

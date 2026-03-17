@@ -3,6 +3,7 @@ const numero = document.querySelector('input#num')
 const res = document.querySelector('p#resultado')
 
 
+
 const converterDolar = () => {
     const quantia =  +numero.value
     const emDolar = quantia / 5.45
