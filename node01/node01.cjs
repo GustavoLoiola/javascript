@@ -1,4 +1,4 @@
-import readline from 'readline';
+const readline = require('readline');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -27,6 +27,7 @@ mostrarMenu = () => {
                     break
 
                     case '4': console.log('Fim do Programa!')
+                    rl.close()
                     break
 
                     default: console.log('Opção inválida!')
@@ -45,18 +46,39 @@ const cadastrarUsuario = () => {
 }
 
 const listarUsuarios = () => {
-    if(usuarios.length == 0) {
+    if(usuarios.length === 0) {
         console.log("Nenhum usuário cadastrado!") 
     }
     else {
        for(let i = 0; i < usuarios.length; i++) {
-        console.log(`Usuário ${c} - ${usuarios[c]}`)
+        console.log(`Usuário ${i + 1} - ${usuarios[i]}`)
        }
     }
 
     mostrarMenu()
 }
 
+const removerUsuarios = () => {
+    if(usuarios.length === 0) {
+        console.log('Não existe nenhum usuário cadastrado!')
+        mostrarMenu()
+    }
+    else {
+        rl.question('Digite o número do usuário que você deseja excluir: ', (num) => {
+            num -= 1
+            if(num >= 0 && num < usuarios.length) {
+            console.log(`Usuário ${usuarios[num]} removido!`)
+            usuarios.splice(num, 1)
+            mostrarMenu()
+            }
+            else {
+            console.log('Número inválido!')
+            removerUsuarios()
+            }
+        })
+      
+    }
+}
 
 
 mostrarMenu()
