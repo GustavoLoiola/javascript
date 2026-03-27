@@ -17,4 +17,5 @@ app.get('/:sigla', (requisicao, resposta) => {
     resposta.status(200).send(time)
 })
 
+
 app.listen(3000, () => console.log('servidor rodando com sucesso!'))

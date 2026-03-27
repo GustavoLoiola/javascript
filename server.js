@@ -31,6 +31,7 @@ app.post('/users', async (req, res) => {
 
     res.status(201).json(req.body)
     /*status 201 para indicar o sucesso e o meu json cadastra o que for escrito na parte do body dele*/
+    res.send("boa")
 
 })
 
