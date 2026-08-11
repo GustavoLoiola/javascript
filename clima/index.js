@@ -40,6 +40,7 @@ const dataView = (data) => {
             "garoa leve",
             "garoa",
             "garoa intensa",
+            "chuva moderada",
             "chuva leve",
             "chuvisco",
             "chuvisco intenso",
