@@ -267,7 +267,7 @@
     color: var(--error);
   }
 
-  /* --- Modal "esqueci a senha" --- */
+  /*Modal "esqueci a senha"*/
   .modal-overlay{
     display: none;
     position: fixed;
